@@ -35,3 +35,22 @@ function digits(n) {
   }
 
 digits(12345467587);
+
+function XO(str) {
+    let newArr =str.split('');
+    let sumOfX = 0;
+    let sumOfO = 0;
+    for ( let key of newArr){
+        if(key == 'x' || key =='X'){
+            sumOfX++;
+        }else if (key == 'o' || key == 'O'){
+            sumOfO++;
+        }
+    }
+    if(sumOfX == sumOfO){
+        return true;
+    } else {
+        return false;
+    }
+  }
+  XO('xioxixxoxoxo');

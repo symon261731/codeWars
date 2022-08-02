@@ -1,4 +1,4 @@
-
+//////////////////////////////////////////////////
 function printerError(s){
     let sum = 0;
     for(let l of s ){
@@ -12,7 +12,7 @@ function printerError(s){
 }
 console.log(printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"));
 
-
+///////////////////////////////////////////////////
 function sumTwoSmallestNumbers(numbers){
     numbers.sort( function(a,b){
         return a-b;
@@ -24,7 +24,7 @@ function sumTwoSmallestNumbers(numbers){
 }
 sumTwoSmallestNumbers([52, 76, 14, 12, 4]);
 
-
+///////////////////////////////////////////////////
 function digits(n) {
     let sum = 0;
     let newN = String(n);
@@ -35,6 +35,7 @@ function digits(n) {
   }
 
 digits(12345467587);
+////////////////////////////////////////////////////
 
 function XO(str) {
     let newArr =str.split('');
@@ -48,9 +49,41 @@ function XO(str) {
         }
     }
     if(sumOfX == sumOfO){
-        return true;
+        return console.log(true);
     } else {
-        return false;
+        return console.log(false);
     }
   }
   XO('xioxixxoxoxo');
+
+///////////////////////////////////////////////////////
+
+function filterArr(arrStr,num){
+    let newArr = arrStr.filter(item => item.length==num);
+    console.log(newArr);
+}
+
+filterArr(["Коррекция", "Виток", "Воздух", "Газоанализатор", "Температура"], 6);
+
+////////////////////////////////////////////////////////
+
+
+function generateRange(min,max,step){
+    let Arr = [min,];
+    while ( Arr[Arr.length-1] < max){
+        Arr.push( Arr[Arr.length-1]+step);
+    }
+    Arr.pop();
+    Arr.push(max);
+    console.log(Arr);
+}
+generateRange(2,12,2);
+// Другой цикл
+function generate(min,max,step){
+    let arr =[];
+    for( let i =min;i<=max;i=i+step){
+        arr.push(i);
+    }
+    console.log(arr);
+}
+generate(0,100,5);

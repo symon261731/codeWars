@@ -97,5 +97,41 @@ let cycleGo = function(){
     }
     str+=' Поехали!';
     console.log(str);
-}
+};
 cycleGo();
+////////////////////////////////////////////////////////////
+
+function smallEnough(a,limit){
+    let arr= a.filter(item=> item>=limit);
+    if (arr.length !=0){
+        console.log(false);
+    }else{
+        console.log(true);
+    }
+}
+smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100);
+
+/////////////////////////////////////////////////////////////
+//key 6
+
+function likes(names){
+    if(names.length == 1){
+        return(`${names} likes this`);
+    } else if (names.length == 2){
+        let arr = names.join(' and ');
+        return(`${arr} like this`);
+    } else if (names.length == 3){
+        return(`${names[0]}, ${names[1]} and ${names[2]} like this`);
+    } else if(names.length >3){
+        return(`${names[0]}, ${names[1]} and ${names.length-2} others like this`);
+    }  else{
+      return `no one likes this`;
+    }
+}
+
+likes(['Peter']);
+likes(['Jacob', 'Alex']);
+likes(['Max', 'John', 'Mark']);
+likes(['Alex', 'Jacob', 'Mark', 'Max']);
+
+//////////////////////////////////////////////////////////////

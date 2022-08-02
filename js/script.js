@@ -87,3 +87,15 @@ function generate(min,max,step){
     console.log(arr);
 }
 generate(0,100,5);
+
+///////////////////////////////////////////////////////////
+
+let cycleGo = function(){
+    let str='';
+    for(let i=20; i>=0; i-=4){
+        str+=i;
+    }
+    str+=' Поехали!';
+    console.log(str);
+}
+cycleGo();

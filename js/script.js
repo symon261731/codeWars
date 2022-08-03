@@ -135,3 +135,40 @@ likes(['Max', 'John', 'Mark']);
 likes(['Alex', 'Jacob', 'Mark', 'Max']);
 
 //////////////////////////////////////////////////////////////
+
+function flattenAndSort(array) {
+    let newArr = array.join(',');
+    console.log(newArr);
+    newArr = newArr.split(',');
+    console.log(newArr);
+    newArr = newArr.filter(item => item!='');
+    console.log(newArr);
+    newArr = newArr.map(item=> Number(item));
+    newArr = newArr.sort((a,b)=> a-b);
+    console.log(newArr);
+  }
+flattenAndSort([[3, 2, 1], [7, 9, 8], [6, 4, 5]]);
+flattenAndSort([[],[],[],[2],[],[1]]);
+//разобраться с 0
+
+//////////////////////////////////////////////////////////////
+function calcSum(arr){
+    let sum =0;
+    for( let elem of arr){
+        if( elem> 0){
+            sum+= elem;
+        } else{
+            sum = sum;
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////
+
+function heronFormula(a,b,c){
+    let s = (a+b+c)/2;
+    let formula = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+    formula = formula.toFixed(2);
+    console.log(formula);
+}
+heronFormula(3,4,5);

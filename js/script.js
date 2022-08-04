@@ -24,6 +24,8 @@ function sumTwoSmallestNumbers(numbers){
 }
 sumTwoSmallestNumbers([52, 76, 14, 12, 4]);
 
+
+
 ///////////////////////////////////////////////////
 function digits(n) {
     let sum = 0;
@@ -172,3 +174,45 @@ function heronFormula(a,b,c){
     console.log(formula);
 }
 heronFormula(3,4,5);
+
+//////////////////////////////////////////////////////////////
+
+
+let y=1;
+let x=y=2;
+console.log(x);
+console.log(typeof([] + false - null + true));
+
+console.log([]+1+2);
+///////////////////////////////////////////////////////////////
+
+
+function tidyNumber(n){
+    let str = String(n);
+    let arr=[];
+    let newArr = str.split('');
+    newArr = newArr.map(item=>Number(item));
+    if(newArr.length != 0){
+        for(let i=0;i<newArr.length-1;i++){
+            if(newArr[i]<=newArr[i+1]){
+                arr.push(true);
+            }else{
+                arr.push(false);
+            }
+        }
+        return arr.every(item=>item===true);
+    }else{
+        return true;
+    }
+}
+tidyNumber(132435364);
+tidyNumber(13579);
+// КАК можно было бы решить понимай ты строки
+const TidyNumber = n => {
+    let s = n.toString();
+    for (let i = 0; i < s.length-1; i++) {
+      if (s[i] > s[i+1]){ return false;}
+    }
+    return true;
+  };
+///////////////////////////////////////////////////////////////////

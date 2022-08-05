@@ -216,3 +216,9 @@ const TidyNumber = n => {
     return true;
   };
 ///////////////////////////////////////////////////////////////////
+
+function findMin(arg){
+    arg.sort((a,b)=>a-b);
+    return arg[0];
+}
+findMin([1,853,4531,1261,23,-51,6125,-621]);

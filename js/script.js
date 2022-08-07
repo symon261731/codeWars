@@ -222,3 +222,5 @@ function findMin(arg){
     return arg[0];
 }
 findMin([1,853,4531,1261,23,-51,6125,-621]);
+
+//HELLO THERE

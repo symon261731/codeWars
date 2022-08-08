@@ -223,4 +223,173 @@ function findMin(arg){
 }
 findMin([1,853,4531,1261,23,-51,6125,-621]);
 
-//HELLO THERE
+/////////////////////////////////////////////////////////////////////
+
+
+const arr =[1,5,2,1,9,2,0,7,6,1];
+
+
+const starDublicate = (massiv) =>{
+    return massiv.map((el,i) => {
+        if( massiv.indexOf(el) === i ){
+            return el;
+        } else {
+            return '*';
+        }
+    });
+};
+
+console.log(starDublicate([1,1,5,6,7,8,9,6,4,]));
+
+////////////////////////FOR BOOTKEMP//////////////////////////////////
+
+const changeSign = () =>{
+    for ( let i=0; i<=10; i++){
+        /*if(i%2 == 0){
+            console.log(i);
+        } else{
+            console.log(-i);
+        }*/
+        i%2 ==0 ? console.log(i) : console.log(-i);
+    }
+};
+changeSign();
+
+
+let calcSquere = (value) => {
+    if( isNaN(value) == false ){
+        return Number(value)**2;
+    } else {
+        return `Ошибка преобразования данных`;
+    }
+};
+
+console.log(calcSquere(5));
+console.log(calcSquere('hello there'));
+console.log(calcSquere(undefined));
+console.log(calcSquere(NaN));
+
+// пишем мапы 
+const calcSquereMap = (array) =>{
+   const newArr =array.map(item => item**2);
+   return newArr;
+};
+console.log(calcSquereMap([1,2,3,46,8,5,723,75,23,612,42]));
+////////////////////
+const calcSqrt = (array) => {
+    let newArr;
+    return newArr = array.map(Math.sqrt);
+};
+console.log(calcSqrt([9,25,90,110,]));
+////////////////////
+const calcPlusInd = (array) =>{
+    const newArr = array.map( (item,index) => item+=index);
+    return newArr;
+};
+console.log(calcPlusInd([1,9,0,8,6,4,3,6,8,4,3,2,4723,]));
+////////////////////
+const calcMunsInd = (array) => {
+    const newArr =array.map( (item,i) => item-=i );
+    return newArr;
+};
+console.log(calcMunsInd([5,3,6,1,2,4,6,2,3,65,1,]));
+///////////////////////
+const calcSquereOfEven = (array) =>{
+    let newArr = array.map(item => {
+        if(item%2==0){
+            return item**2;
+        } else{
+            return item;
+        }
+    });
+    return newArr;
+};
+console.log(calcSquereOfEven([1,2,3,4,5,6,7,8]));
+///////////////////////////
+const calcSquereOfOdd = (array) =>{
+    const newArr = array.map(fuckingitem => {
+        if(fuckingitem%2!=0){
+            return fuckingitem**2;
+        } else{
+            return fuckingitem;
+        }
+    });
+    return newArr;
+};
+console.log(calcSquereOfOdd([1,34,56,7,7,42,1,34,78,9,87,43,2]));
+////////////////////////////
+const calcSumofElem = (arr) => {
+    let sum=0;
+    let newArr = arr.map((item)=> {
+       return sum+=item;
+    });
+    return newArr[newArr.length-1];
+};
+console.log(calcSumofElem([2,4,6,8]));
+//////////////////////////////
+
+const calcDifferenceofElem = (arr) => {
+    let difference = 0;
+    let newArr = arr.map(item => difference-=item);
+    return newArr[newArr.length-1];
+};
+console.log(calcDifferenceofElem([0,0,1,46,1,3,1,2,4,6]));
+///////////////////////////////
+const changeArrToObg = (array) =>{
+    const newObj ={};
+    array.map((item,i)=> newObj[i] = item);
+    return newObj;
+};
+console.log(changeArrToObg([1,2,34,5,6,4,12,]));
+/////////////////////////////////
+const changeArrToObgAlternative = (arr) =>{
+    const anotherObg = {};
+    arr.map((item,index) => anotherObg[item] = index );
+    return anotherObg;
+};
+console.log(changeArrToObgAlternative([5,7,4,3,78,3,1,3,6,8,'hello',]));
+/////////////////////////////////
+const changeArrToObgWithStr = (arrAGAIN) =>{
+    const objectAgain = {};
+    arrAGAIN.map((item,index) =>objectAgain[`Индекс №${index+1}`] = `Элемент:${item}`);
+    return objectAgain;
+};
+console.log(changeArrToObgWithStr([1,6,4,7,45,21,'Oh my gush']));
+////////////////////////////////
+const someThing = (arrrrrrrrrrrrrr) =>{
+   const newArr = arrrrrrrrrrrrrr.map((item,index) => [`INDEX:${index}, Element:${item}`]);
+   return newArr;
+};
+console.log(someThing([1,2,35,7,4,2,45,,1,2313]));
+////////////////////////////////////////////////
+const removeEvery = (arr) =>{
+    const newArr = arr.map((item)=>{
+        let it = String(item);
+        if(it.length > 1){
+            return `*`;
+        } else{
+            return Number(it);
+        }
+    });
+    return newArr;
+};
+console.log(removeEvery([5,65,4323,745,312,854,3216,13,31,2,32,2,33,]));
+///////////////////////////////////////
+const oneMore = (arr) =>{
+    const newArr = arr.map(item =>{
+      const result =  item%2==0 ? item/2 : item;
+      return result;
+    });
+    return newArr;
+};
+console.log(oneMore([1,2,3,4,5,6,7,8,9,10,20]));
+////////////////////////////////////////
+const calcMultiply = (arr) =>{
+    const anotherArr = arr.map((item,i,arr) => {
+        let result= item%2==0 ? item : item*= arr[i+1];
+        return result;
+    });
+    return anotherArr;
+};
+console.log(calcMultiply([1,5,6,65,3,6,8,4,1,3,67,12,257,2,5,12]));//проблема с последний элементом
+///////////////////////////////////////////

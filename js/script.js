@@ -538,3 +538,69 @@ let trimSpaces = str =>{
 console.log(trimSpaces('Ко с мос'));
 
 /////////////////////////////////////////////////////
+
+let evaluate = (str) =>{
+    let arr =str.split(' ');
+    if( arr[0] ==  '-'){
+        return  arr[1]-arr[2];
+    } else if (arr[0] ==  '*'){
+        return arr[1]*arr[2];
+    } else if (arr[0] ==  '/'){
+        return arr[1]/arr[2];
+    } else if (arr[0] ==  '+'){
+        return Number(arr[1]) + Number(arr[2]);
+    }
+};
+console.log(evaluate(`- 420 69`));
+console.log(evaluate(`* 3 3`));
+console.log(evaluate(`+ 420 420`));
+console.log(evaluate(`/ 330 2`));
+console.log(evaluate(`* -3 3`));
+console.log(evaluate(`/ 3 0`));
+
+
+let evaluate2 = (str) =>{
+    let arr = str.split(' ');
+    let sign = arr[0];
+    switch(sign){
+        case `*`: return arr[1] * arr[2];     
+        case `+`: return Number(arr[1]) + Number(arr[2]);
+        case `-`: return arr[1] - arr[2];
+        case `/`: return arr[1] / arr[2];
+    }
+};
+console.log(evaluate2(`- 420 69`));
+console.log(evaluate2(`* 3 3`));
+console.log(evaluate2(`+ 420 420`));
+console.log(evaluate2(`/ 330 2`));
+console.log(evaluate2(`* -3 3`));
+console.log(evaluate2(`/ 3 0`));
+
+/////////////////////////////////////////////////////////
+
+
+let countOverLap2 = (array) => {
+    let sum=0;
+    for ( let i=0; i<array.length; i++){
+        for( let j=0; j<i.length; i++){
+            if (array[i][j] == array[i+1][j] ){
+                sum+=1;
+            }
+        }
+    }
+    return sum;
+};
+
+
+
+/////////////////////////////////////////////////////
+
+let collectNum = (min,max) =>{
+    newArr=[];
+    for ( let i=min+1; i<max; i++){
+        newArr.push(i);
+    }
+    return `${newArr.join(' ')} Привет!`;
+};
+
+console.log(collectNum(2,10));
